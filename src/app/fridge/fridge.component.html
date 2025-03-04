@@ -1,0 +1,32 @@
+<!-- fridge.component.html -->
+<div class="fridge-container">
+  <!-- Fridge Interior with shelves -->
+  <div class="fridge-inner">
+    <div class="shelf" *ngFor="let shelf of shelves">
+      <h3 class="shelf-title">{{ shelf.category }}</h3>
+      <div class="food-items">
+        <div class="food-item" *ngFor="let item of shelf.items">
+          <img [src]="item.image" [alt]="item.name" class="food-img" />
+          <div class="food-info">
+            <p class="food-name">{{ item.name }}</p>
+            <p class="food-expiry">Exp: {{ item.expiryDate }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- iPad Display on Fridge Door -->
+  <div class="fridge-door">
+    <div class="ipad-display">
+      <h2 class="ipad-title">Food Storage</h2>
+      <ul class="food-list">
+        <li *ngFor="let item of foodItems" class="food-list-item">
+          <span>{{ item.name }}</span>
+          <span class="expiry-date">Exp: {{ item.expiryDate }}</span>
+        </li>
+      </ul>
+      <button (click)="addItem()" class="add-item-btn">+ Add Item</button>
+    </div>
+  </div>
+</div>
