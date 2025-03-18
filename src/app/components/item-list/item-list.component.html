@@ -1,1 +1,7 @@
-<p>item-list works!</p>
+<ul>
+  <li *ngFor="let item of items">
+    {{ item.name }} - {{ item.quantity }} (Expires:
+    {{ item.expirationDate || "N/A" }})
+    <button (click)="removeItem(item.id)">Remove</button>
+  </li>
+</ul>

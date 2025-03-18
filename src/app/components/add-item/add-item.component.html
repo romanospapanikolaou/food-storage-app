@@ -1,1 +1,6 @@
-<p>add-item works!</p>
+<div>
+  <input [(ngModel)]="name" placeholder="Item Name" />
+  <input type="number" [(ngModel)]="quantity" min="1" />
+  <input type="date" [(ngModel)]="expirationDate" />
+  <button (click)="addItem()">Add Item</button>
+</div>
