@@ -1,6 +1,20 @@
-<div>
-  <input [(ngModel)]="name" placeholder="Item Name" />
-  <input type="number" [(ngModel)]="quantity" min="1" />
-  <input type="date" [(ngModel)]="expirationDate" />
-  <button (click)="addItem()">Add Item</button>
+<div class="card p-3">
+  <h4>Add New Item</h4>
+  <div class="form-group">
+    <input
+      type="text"
+      [(ngModel)]="name"
+      class="form-control mb-2"
+      placeholder="Item Name"
+    />
+    <input
+      type="number"
+      [(ngModel)]="quantity"
+      class="form-control mb-2"
+      placeholder="Quantity"
+      min="1"
+    />
+    <input type="date" [(ngModel)]="expirationDate" class="form-control mb-2" />
+    <button (click)="addItem()" class="btn btn-primary">Add Item</button>
+  </div>
 </div>
