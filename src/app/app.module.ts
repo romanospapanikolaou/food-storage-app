@@ -14,7 +14,7 @@ import { ItemListComponent } from './components/item-list/item-list.component';
     AddItemComponent,
     ItemListComponent,
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, AddItemComponent],
   providers: [],
   bootstrap: [AppComponent],
 })
