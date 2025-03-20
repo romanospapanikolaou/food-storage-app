@@ -1,19 +1,15 @@
-<div class="row">
-  <div class="col-md-4" *ngFor="let item of filteredItems()">
-    <div class="card shadow-sm">
-      <div class="card-body">
-        <h5 class="card-title">{{ item.name }}</h5>
-        <p class="card-text">📦 Quantity: {{ item.quantity }}</p>
-        <p
-          class="card-text"
-          [ngClass]="{ 'text-danger': isExpiringSoon(item.expirationDate) }"
-        >
-          ⏳ Expires: {{ item.expirationDate || "N/A" }}
-        </p>
-        <button class="btn btn-danger btn-sm" (click)="removeItem(item)">
-          🗑 Remove
-        </button>
-      </div>
+<div class="item-grid">
+  <div class="item-card" *ngFor="let item of filteredItems()">
+    <div class="card-content">
+      <h5 class="card-title">{{ item.name }}</h5>
+      <p class="card-text">📦 Quantity: {{ item.quantity }}</p>
+      <p
+        class="card-text"
+        [ngClass]="{ 'expiring-soon': isExpiringSoon(item.expirationDate) }"
+      >
+        ⏳ Expires: {{ item.expirationDate || "N/A" }}
+      </p>
+      <button class="remove-btn" (click)="removeItem(item)">🗑 Remove</button>
     </div>
   </div>
 </div>

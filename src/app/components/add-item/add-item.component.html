@@ -1,20 +1,13 @@
-<form (ngSubmit)="addItem()" class="row g-3">
-  <div class="col-md-6">
-    <label class="form-label">Item Name</label>
-    <input
-      type="text"
-      class="form-control"
-      [(ngModel)]="name"
-      name="name"
-      required
-    />
+<form (ngSubmit)="addItem()" class="form-container">
+  <div class="form-group">
+    <label>Item Name</label>
+    <input type="text" [(ngModel)]="name" name="name" required />
   </div>
 
-  <div class="col-md-3">
-    <label class="form-label">Quantity</label>
+  <div class="form-group">
+    <label>Quantity</label>
     <input
       type="number"
-      class="form-control"
       [(ngModel)]="quantity"
       name="quantity"
       required
@@ -22,17 +15,10 @@
     />
   </div>
 
-  <div class="col-md-3">
-    <label class="form-label">Expiration Date</label>
-    <input
-      type="date"
-      class="form-control"
-      [(ngModel)]="expirationDate"
-      name="expirationDate"
-    />
+  <div class="form-group">
+    <label>Expiration Date</label>
+    <input type="date" [(ngModel)]="expirationDate" name="expirationDate" />
   </div>
 
-  <div class="col-12 mt-2">
-    <button type="submit" class="btn btn-success w-100">➕ Add Item</button>
-  </div>
+  <button type="submit" class="add-item-btn">➕ Add Item</button>
 </form>
