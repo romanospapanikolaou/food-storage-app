@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common'; // ✅ Import this
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-item-list',
   standalone: true,
-  imports: [CommonModule], // ✅ Add CommonModule here
+  imports: [CommonModule],
   templateUrl: './item-list.component.html',
-  styleUrls: ['./item-list.component.scss'],
+  styleUrls: ['./item-list.component.css'],
 })
 export class ItemListComponent {
   @Input() searchTerm: string = '';

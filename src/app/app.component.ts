@@ -6,6 +6,6 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
   standalone: true,
   imports: [DashboardComponent],
   template: '<app-dashboard></app-dashboard>',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {}

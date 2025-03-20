@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [], // ✅ No need to declare standalone components
-  imports: [BrowserModule], // ✅ Only import necessary modules
-  bootstrap: [], // ✅ Ensure AppComponent is the entry point
+  declarations: [],
+  imports: [BrowserModule],
+  bootstrap: [],
 })
 export class AppModule {}
