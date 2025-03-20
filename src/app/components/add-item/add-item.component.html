@@ -1,20 +1,38 @@
-<div class="card p-3">
-  <h4>Add New Item</h4>
-  <div class="form-group">
+<form (ngSubmit)="addItem()" class="row g-3">
+  <div class="col-md-6">
+    <label class="form-label">Item Name</label>
     <input
       type="text"
+      class="form-control"
       [(ngModel)]="name"
-      class="form-control mb-2"
-      placeholder="Item Name"
+      name="name"
+      required
     />
+  </div>
+
+  <div class="col-md-3">
+    <label class="form-label">Quantity</label>
     <input
       type="number"
+      class="form-control"
       [(ngModel)]="quantity"
-      class="form-control mb-2"
-      placeholder="Quantity"
+      name="quantity"
+      required
       min="1"
     />
-    <input type="date" [(ngModel)]="expirationDate" class="form-control mb-2" />
-    <button (click)="addItem()" class="btn btn-primary">Add Item</button>
   </div>
-</div>
+
+  <div class="col-md-3">
+    <label class="form-label">Expiration Date</label>
+    <input
+      type="date"
+      class="form-control"
+      [(ngModel)]="expirationDate"
+      name="expirationDate"
+    />
+  </div>
+
+  <div class="col-12 mt-2">
+    <button type="submit" class="btn btn-success w-100">➕ Add Item</button>
+  </div>
+</form>

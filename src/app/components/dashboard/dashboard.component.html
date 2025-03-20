@@ -1,5 +1,26 @@
-<div class="container text-center">
-  <h1 class="mb-4">Food Storage App</h1>
-  <app-add-item></app-add-item>
-  <app-item-list></app-item-list>
+<div class="container">
+  <h1 class="mt-4 text-center">🍏 Food Storage App</h1>
+
+  <!-- Add Item Section -->
+  <div class="card mt-3 shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title">➕ Add New Item</h5>
+      <app-add-item></app-add-item>
+    </div>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="mt-4">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="🔍 Search food items..."
+      [(ngModel)]="searchTerm"
+    />
+  </div>
+
+  <!-- Item List -->
+  <div class="mt-4">
+    <app-item-list [searchTerm]="searchTerm"></app-item-list>
+  </div>
 </div>
